@@ -6,13 +6,13 @@ public class Hangman {
 		boolean newRound = true;
 		
 		while(newRound) {
-			
 			Round round = new Round();
 			Reader reader = new Reader();
 			System.out.println("Let's go!");
 			
 			while(true) {
 				if(round.isOver()) {
+					Displayer.displayStickFigure(round.MAX_MISTAKES);
 					System.out.printf("Sorry! Game over...\nThe word was %s.\n", round.getWord());
 					newRound = reader.getNewRoundInput();
 					break;
