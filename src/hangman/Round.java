@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Round {
-	final int MAX_MISTAKES = 9;
-	
-	static public Words words = new Words();
+	final int MAX_MISTAKES = 10;
 	
 	private Word word;
 	private List<Character> guessedLetters;
@@ -20,9 +18,9 @@ public class Round {
 	}
 	
 	public void display() {
-		Displayer.displayWord(word);
+		Displayer.displayStickFigure(mistakesCount);
 		Displayer.displayGuessedLetters(guessedLetters);
-		Displayer.displayMistakes(mistakesCount);
+		Displayer.displayWord(word);
 	}
 	
 	public guessStatus checkGuess() {

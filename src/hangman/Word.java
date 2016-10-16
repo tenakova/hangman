@@ -2,12 +2,14 @@ package hangman;
 
 public class Word {
 	
+	static public Words words = new Words();
+	
 	private String word;
 	private boolean[] wordState;
 	
 	
 	public Word() {
-		word = Round.words.getWord();
+		word = words.getWord();
 		
 		wordState = new boolean[word.length()];
 		makeState();
